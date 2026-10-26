@@ -1,108 +1,213 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mywebsite</title>
+    <title>MyWebsite</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 </head>
 <body>
-      <nav class="navbar">
+
+    <nav class="navbar" id="home">
         <div class="logo">MyWebsite</div>
         <ul class="nav-links">
-            <li><a href="file:///C:/Users/dines/OneDrive/Desktop/Batch%20oct/CSS/webpage/index.html" class="anchor-link">Home</a></li>
-            <li><a href="#about" class="anchor-link">About us</a></li>
+            <li><a href="#home" class="anchor-link">Home</a></li>
+            <li><a href="#about" class="anchor-link">About Us</a></li>
             <li><a href="#product" class="anchor-link">Products</a></li>
-            <li><a href=""class="anchor-link">contact</a></li>
+            <li><a href="#contact" class="anchor-link">Contact Us</a></li>
         </ul>
     </nav>
 
     <div class="hero">
         <h1>Welcome to My Website</h1>
-        <p>Discover the best Products at afforable price.</p>
-        <button>Explore Products</button>
+        <p>Discover the best Products at affordable prices.</p>
+        <a href="#product" class="hero-btn">Explore Products</a>
     </div>
 
     <section class="about" id="about">
         <div class="about-container">
             <div class="about-image">
-                <img src="about2.avif">
+                <img src="New Balance Creative Studio Brainstorm.png" alt="Our team working together">
             </div>
+
             <div class="about-content">
-                <h4>About Us</h4>
-
+                <h4>ABOUT US</h4>
                 <h1>We Build Ideas into Reality With Team</h1>
+                <p>
+                    Welcome to MyWebsite! We offer New Balance products like Cricket Bat, Shoes and Hoodies at Original prices. Our goal is to provide a simple and enjoyable shopping experience with great value and customer satisfaction.
+                </p>
+                <a href="#contact" class="about-btn">Learn More</a>
+            </div>
+        </div>
+    </section>
 
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In laboriosam tempore adipisci illum mollitia, odio totam sed possimus illo hic quibusdam tempora ratione minima error nostrum distinctio alias rerum est, consectetur voluptatem expedita? Distinctio, est ipsa vitae quod amet iusto itaque, eaque vero aut, quis repudiandae aliquam quisquam veritatis aperiam!</p>
-                
-                <a href="" class="about-btn">Learn More</a>
+    <h1 class="product-head" id="product">Our Products</h1>
+
+    <div class="product-container">
+
+        <div class="product-card">
+            <img src="NB Cricket Bat.webp" alt="Cricket Bat">
+            <h3>Cricket Bat</h3>
+            <p>Designed for cricket lovers who value performance and style.</p>
+            <h4>₹50,000.00</h4>
+            <button type="button">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="NB Shoe.webp" alt="Shoes">
+            <h3>Shoes</h3>
+            <p>Comfortable and stylish shoes for everyday use.</p>
+            <h4>₹6000.00</h4>
+            <button type="button">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="NB Hoodie.webp" alt="Hoodie">
+            <h3>Hoodie</h3>
+            <p>Comfortable everyday wear with a sporty look</p>
+            <h4>₹2000.00</h4>
+            <button type="button">Buy Now</button>
+        </div>
+
+    </div>
+
+    <!-- Contact Us Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+
+            <div class="contact-info">
+                <h4>GET IN TOUCH</h4>
+                <h1>Contact Us</h1>
+                <p>
+                    Have a question or want to know more about our products?
+                    Fill in the form and let us know how we can help.
+                </p>
+
+                <div class="contact-detail">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>pavankarra2712@gmail.com</span>
+                </div>
+
+                <div class="contact-detail">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+91 8522965119</span>
+                </div>
+            </div>
+
+            <div class="contact-form-box">
+                <h2>Send Us a Message</h2>
+
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="customer_name">Customer Name</label>
+                        <input
+                            type="text"
+                            id="customer_name"
+                            name="customer_name"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customer_address">Customer Address</label>
+                        <textarea
+                            id="customer_address"
+                            name="customer_address"
+                            placeholder="Enter your address"
+                            rows="4"
+                            autocomplete="street-address"
+                            required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input
+                            type="text"
+                            id="company"
+                            name="company"
+                            placeholder="Enter your company name"
+                            autocomplete="organization"
+                            required>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        Submit Details <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <p id="formMessage" class="form-message" role="status"></p>
+                </form>
             </div>
 
         </div>
     </section>
 
-     <h1 class="product-head" id="product">Our Products</h1>
-    <div class="product-container">
-        <div class="product-card">
-            <img src="shopping1.webp">
-            <h3>Headphones</h3>
-            <p>High Quality Products</p>
-            <h4>₹1,500.00</h4>
-            <button>Buy Now</button>
-        </div>
-        <div class="product-card">
-             <img src="watches.jpeg">
-            <h3>Watch</h3>
-            <p>High Quality Products</p>
-            <h4>₹800.00</h4>
-            <button>Buy Now</button>
-        </div>
-        <div class="product-card">
-             <img src="mobile.jpeg">
-            <h3>Mobile</h3>
-            <p>High Quality Products</p>
-            <h4>₹25,000.00</h4>
-            <button>Buy Now</button>
-        </div>
-    </div>
-
     <footer>
-    <div class="footer-container">
-        <div class="footer-box">
-        <h2>MyWebsite</h2>
-        <p>Welcome to my Website.we provide quality products to our customer with afforable</p>
-      </div>
+        <div class="footer-container">
 
-      <div class="footer-links">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Service</a></li>
-          <li><a href="">Contact</a></li>
-        </ul>
-      </div>
+            <div class="footer-box">
+                <h2>MyWebsite</h2>
+                <p>Welcome to my Website. We provide quality products to our customers at affordable prices.</p>
+            </div>
 
-      <div class="footer-contact">
-        <h3>contact us</h3>
-        <p>Email: mywebsite@gmail.com</p>
-        <p>Phone: +91 9876543210</p>
-        <p>Location: HSR Layout, Banglore, Karanataka, India</p>
-      </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#product">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
 
-      <div class="footer-media">
-        <h3>Follow us</h3>
-        <a href=""><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-        <a href=""><i class="fa-brands fa-youtube"></i></a>
-      </div>
-    </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: pavankarra2712@gmail.com</p>
+                <p>Phone: +91 8522965119</p>
+                <p>Location: Madhapur, Hyderabad, Telangana, India</p>
+            </div>
 
-    <div class="copyright">
-        <p>&copy 2026 Mywebsite. All rights reserved.</p>
-    </div>
-</footer>
+            <div class="footer-media">
+                <h3>Follow Us</h3>
+                <a href="https://www.instagram.com/" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://www.youtube.com/" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2026 MyWebsite. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const contactForm = document.getElementById("contactForm");
+        const formMessage = document.getElementById("formMessage");
+
+        contactForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            if (!contactForm.checkValidity()) {
+                contactForm.reportValidity();
+                return;
+            }
+
+            formMessage.textContent =
+                "Thank you! Your details have been validated.";
+
+            formMessage.classList.add("success-message");
+            contactForm.reset();
+        });
+    </script>
 
 </body>
 </html>
